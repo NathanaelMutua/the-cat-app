@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js" integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>The Cat App</title>
   </head>
   <body>
@@ -20,23 +21,25 @@
       </div>
       <form action="" class="cat-entry-form">
         <div class="cat-input-title">
-          <p>Number of Cats Facts (50Maximum)</p>
+          <p>Number of Cats Facts (50 Maximum)</p>
           <div class="input-holder">
-            <input type="text" id="cat-facts-count" placeholder="number of cat facts (50 Max)" class="cat-input">
-            <button id="photo-submit-btn" class="submit-btn">Submit</button>
+            <input type="number" id="cat-facts-count" placeholder="number of cat facts (50 Max)" class="cat-input">
+            <button id="fact-submit-btn" class="submit-btn" type="button">Submit</button>
           </div>
         </div>
         <div class="cat-input-title">
-          <p>Number of Cats Photos (10Max)</p>
+          <p>Number of Cats Photos (10 Max)</p>
           <div class="input-holder">
-            <input type="text" id="cat-photos-count" placeholder="number of cat photos (10 Max)" class="cat-input">
-            <button id="photo-submit-btn" class="submit-btn">Submit</button>
+            <input type="number" id="cat-photos-count" placeholder="number of cat photos (10 Max)" class="cat-input">
+            <button id="photo-submit-btn" class="submit-btn" type="button">Submit</button>
           </div>
         </div>
       </form>
     </section>
     <section class="search-result">
-        <!-- input from searches -->
+        <div class="result-content-holder">
+          <!-- <p>1.Test Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, iure?</p> -->
+        </div>
     </section>
   </body>
 </html>

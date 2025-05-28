@@ -7,7 +7,7 @@
 :root{
   --primary-color: #fad0c4;
   --secondary-color: #c599b6;
-  --text-black: ;
+  --text-black: #000000;
   --smokey-white: ;
 }
 
@@ -50,36 +50,54 @@ html{
 }
 
 .cat-input-title p{
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
 .input-holder{
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  color: var(--primary-color);
+  gap: .6rem;
 }
 
 .cat-input{
-  height: 5.2rem;
+  height: 5.4rem;
   width: 30rem;
-  padding: 1rem 3rem;
-  font-size: 1.6rem;
-  font-style: italic;
-  /* font-family: ; */
-  font-weight: 600;
-  color: var(--primary-color);
+  padding: 1.2rem 3rem;
+  font-size: 2.1rem;
+  text-align: center;
+  color: var(--text-black);
+  font-weight: 700;
   border: none;
   border-radius: 5px;
+  outline: none;
+}
+
+.cat-input::placeholder{
+  color: var(--secondary-color);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.7rem;
 }
 
 .submit-btn{
   padding: 1.4rem 1.9rem;
   font-size: 1.9rem;
-  font-weight: 600;
+  font-weight: 500;
   color: whitesmoke;
   background-color: var(--secondary-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.search-result{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 82%;
+  padding: 5rem 0;
+  text-align: left;
+  font-size: 2.1rem;
 }
