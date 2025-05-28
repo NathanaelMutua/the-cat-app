@@ -4,6 +4,7 @@ const photoBtn = document.getElementById("photo-submit-btn");
 const factBtn = document.getElementById("fact-submit-btn");
 const displayedFactsHolder = document.querySelector(".result-content-holder");
 const spinner = document.getElementById("spinner");
+const spinnerWrapper = document.querySelector(".spinner-wrapper")
 
 
 // assigning data values to an ordered list that we can output
@@ -18,12 +19,14 @@ let getDataFacts = function(array){
 
 // activating the spinner
 function startSpinner(){
+    spinnerWrapper.style.display = "block";
     spinner.style.display = "block";
 }
 
 // deactivation the spinner
 function stopSpinner(){
-    spinner.style.display = "none";
+    spinnerWrapper.style.display = "none";
+    // spinner.style.display = "none";
 }
 
 // function to get the image URLs from the image data object
@@ -67,7 +70,7 @@ factBtn.addEventListener("click", async function getFacts(){
         
 
     } catch (error){
-        console.error();
+        console.error("Error");
     }
     
 })
@@ -101,6 +104,6 @@ photoBtn.addEventListener("click", async function(){
 
 
     } catch (error){
-        console.error();
+        console.error("Error");
     }
 })

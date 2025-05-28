@@ -100,7 +100,7 @@ body{
 
 .search-result{
   display: flex;
-  /* flex-direction: column; */
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   width: 78%;
@@ -114,6 +114,7 @@ body{
   height: 20rem;
   width: 20rem;
   margin: auto;
+  display: none;
 }
 
 .spinner-wrapper img{
@@ -136,16 +137,22 @@ body{
   }
 }
 
+.result-content-holder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .displayed-images-container{
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
   row-gap: 1rem;
 }
 
 .displayed-image-wrapper{
-  border: 2px solid red;
   width: 280px;
   height: 400px;
 }
