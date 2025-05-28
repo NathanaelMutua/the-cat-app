@@ -26,13 +26,29 @@ function stopSpinner(){
     spinner.style.display = "none";
 }
 
+// function to get the image URLs from the image data object
+function getDataPhotos(object, len){
+    let photoListItems = "";
+    for (let i = 0; i < len; i++){
+        let photoKeyValue = object[i]
+        let height = photoKeyValue.height;
+        let width = photoKeyValue.width;
+        let id = photoKeyValue.id;
 
-factBtn.addEventListener("click", async function getFact(){
+        photoListItems += `<div class="displayed-image-wrapper"><img class="displayed-image" src="https://cdn2.thecatapi.com/images/${id}.jpg" height="${height}" width="${width}" /></div>`; // this should give me some flexibility in styling the element
+    }
+    const photoList = `<div class="displayed-images-container">${photoListItems}</div>`;
+    return photoList
+}
+
+
+
+factBtn.addEventListener("click", async function getFacts(){
     displayedFactsHolder.innerHTML = null;
     startSpinner()
 
     let factCountValue = Number(factCount.value);
-    let maxfactValue = 50;
+    const maxfactValue = 50;
 
     // I want to ensure that the value being entered is not more than 50, if it is, the max will be 50
     if (factCountValue > 50){
@@ -56,7 +72,33 @@ factBtn.addEventListener("click", async function getFact(){
     
 })
 
-// photoBtn.addEventListener("click", function(){
-//     let photoCountValue = photoCount.value;
-//     console.log(photoCountValue);
-// })
+photoBtn.addEventListener("click", async function(){
+    displayedFactsHolder.innerHTML = null;
+    startSpinner()
+
+    let photoCountValue = photoCount.value;
+    const maxPhotoValue = 10;
+
+    // the sample site gives data even when thedata is 0 or more than 10, but not more than 10
+    if (photoCountValue == 0){
+        photoCountValue = 1;
+    } else if (photoCountValue > maxPhotoValue){
+        photoCountValue = maxPhotoValue;
+    }
+
+    try{
+        const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=${photoCountValue}`)
+        const data = response.data;
+
+        // console.log(data);
+
+        stopSpinner()
+
+        // console.log(getDataPhotos(data, photoCountValue));
+        displayedFactsHolder.innerHTML = getDataPhotos(data, photoCountValue);
+
+
+    } catch (error){
+        console.error();
+    }
+})
