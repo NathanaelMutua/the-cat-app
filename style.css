@@ -8,7 +8,7 @@
   --primary-color: #fad0c4;
   --secondary-color: #c599b6;
   --text-black: #000000;
-  --smokey-white: ;
+  --smokey-white: #f5f5f5;
 }
 
 html{
@@ -27,7 +27,7 @@ html{
 }
 
 .header-text{
-  margin-bottom: 1.6rem;
+  margin-bottom: .7rem;
   margin-top: 4.1rem;
   font-size: 4.3rem;
   font-weight: 800;
@@ -41,6 +41,7 @@ html{
   align-items: center;
   gap: 8rem;
   flex-wrap: wrap;
+  row-gap: 2rem;
 }
 
 .cat-input-title{
@@ -85,7 +86,7 @@ html{
   padding: 1.4rem 1.9rem;
   font-size: 1.9rem;
   font-weight: 500;
-  color: whitesmoke;
+  color: var(--smokey-white);
   background-color: var(--secondary-color);
   border: none;
   border-radius: 5px;
@@ -94,10 +95,37 @@ html{
 
 .search-result{
   display: flex;
+  /* flex-direction: column; */
   margin-left: auto;
   margin-right: auto;
-  width: 82%;
+  width: 78%;
   padding: 5rem 0;
   text-align: left;
   font-size: 2.1rem;
+}
+
+.spinner-wrapper{
+  height: 20rem;
+  width: 20rem;
+  margin: auto;
+}
+
+.spinner-wrapper img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#spinner{
+  animation: rotation .5s linear infinite;
+  display: none;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
