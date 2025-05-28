@@ -4,10 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js" defer></script>
+    <title>The Cat App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <section class="header-section">
+      <div class="header">
+        <h1 class="header-text">
+          The Cats App
+        </h1>
+      </div>
+      <form action="" class="cat-entry-form">
+        <div class="cat-input-title">
+          <p>Number of Cats Facts (50Maximum)</p>
+          <div class="input-holder">
+            <input type="text" id="cat-facts-count" placeholder="number of cat facts (50 Max)" class="cat-input">
+            <button id="photo-submit-btn" class="submit-btn">Submit</button>
+          </div>
+        </div>
+        <div class="cat-input-title">
+          <p>Number of Cats Photos (10Max)</p>
+          <div class="input-holder">
+            <input type="text" id="cat-photos-count" placeholder="number of cat photos (10 Max)" class="cat-input">
+            <button id="photo-submit-btn" class="submit-btn">Submit</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="search-result">
+        <!-- input from searches -->
+    </section>
   </body>
 </html>
