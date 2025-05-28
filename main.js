@@ -72,6 +72,8 @@ factBtn.addEventListener("click", async function getFacts(){
     
 })
 
+
+// getting cat photos
 photoBtn.addEventListener("click", async function(){
     displayedFactsHolder.innerHTML = null;
     startSpinner()
@@ -90,11 +92,11 @@ photoBtn.addEventListener("click", async function(){
         const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=${photoCountValue}`)
         const data = response.data;
 
-        // console.log(data);
+        console.log(data);
 
         stopSpinner()
 
-        // console.log(getDataPhotos(data, photoCountValue));
+        console.log(getDataPhotos(data, photoCountValue));
         displayedFactsHolder.innerHTML = getDataPhotos(data, photoCountValue);
 
 
