@@ -1,37 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="main.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js" integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"
+      integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>The Cat App</title>
   </head>
   <body>
     <section class="header-section">
       <div class="header">
-        <h1 class="header-text">
-          The Cats App
-        </h1>
+        <h1 class="header-text">The Cats App</h1>
       </div>
       <form action="" class="cat-entry-form">
         <div class="cat-input-title">
           <p>Number of Cats Facts (50 Maximum)</p>
           <div class="input-holder">
-            <input type="number" id="cat-facts-count" placeholder="number of cat facts (50 Max)" class="cat-input">
-            <button id="fact-submit-btn" class="submit-btn" type="button">Submit</button>
+            <input
+              type="number"
+              id="cat-facts-count"
+              placeholder="number of cat facts (50 Max)"
+              class="cat-input"
+            />
+            <button id="fact-submit-btn" class="submit-btn" type="button">
+              Submit
+            </button>
           </div>
         </div>
         <div class="cat-input-title">
           <p>Number of Cats Photos (10 Max)</p>
           <div class="input-holder">
-            <input type="number" id="cat-photos-count" placeholder="number of cat photos (10 Max)" class="cat-input">
-            <button id="photo-submit-btn" class="submit-btn" type="button">Submit</button>
+            <input
+              type="number"
+              id="cat-photos-count"
+              placeholder="number of cat photos (10 Max)"
+              class="cat-input"
+            />
+            <button id="photo-submit-btn" class="submit-btn" type="button">
+              Submit
+            </button>
           </div>
         </div>
       </form>
@@ -41,7 +61,7 @@
         <!-- This is where all the stuf we make requests for will appear -->
       </div>
       <div class="spinner-wrapper">
-        <img src="./public/spinner.png" alt="spinner" id="spinner">
+        <img src="./public/spinner.png" alt="spinner" id="spinner" />
       </div>
     </section>
   </body>
